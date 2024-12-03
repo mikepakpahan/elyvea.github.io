@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="profile.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo"><img id="logo" src="../Assets/logo.png" alt="" /></div>
+      <div class="cart"></div>
+      <div class="navbar">
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+      <div class="dropdown-menu">
+        <li>
+          <a href="../index.html"><i class="fa-solid fa-house"></i> Home</a>
+        </li>
+        <li>
+          <a href="profile.html"><i class="fa-regular fa-address-card"></i> Profile</a>
+        </li>
+        <li>
+          <a href="../history/history.html"><i class="fa-regular fa-folder"></i> History</a>
+        </li>
+      </div>
+    </header>
+    <section>
+      <div class="card">
+        <div class="profile-img">
+          <img src="../Assets/profil.jpg" alt="Profile Image" />
+        </div>
+        <h1>Sumanti</h1>
+        <p class="description">sumanto@gmail.com</p>
+      </div>
+    </section>
+
+    <script>
+      // Fungsi untuk dropdown menu
+      const toggleBtn = document.querySelector(".toggle_btn");
+      const toggleBtnIcon = document.querySelector(".toggle_btn i");
+      const dropDownMenu = document.querySelector(".dropdown-menu");
+      const menuItems = document.querySelectorAll(".dropdown-menu li a");
+
+      toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle("open");
+        const isOpen = dropDownMenu.classList.contains("open");
+
+        toggleBtn.classList.toggle("rotate", isOpen);
+      };
+
+      menuItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          dropDownMenu.classList.remove("open");
+        });
+      });
+    </script>
+  </body>
+</html>

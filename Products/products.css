@@ -1,0 +1,208 @@
+body {
+  background-color: #012b09;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    background-color: #ff9900;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s, background-color 0.3s;
+    /* opacity: 0; */
+    visibility: visible;
+    z-index: 1000;
+  }
+  
+  .scroll-to-top:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(255, 153, 0, 0.4);
+    background-color: #ffffff; 
+    color: #ff9900;/
+  }
+  
+  .scroll-to-top.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+header {
+  margin: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #012b09;
+}
+
+#logo {
+  max-width: 200px;
+  height: auto;
+}
+
+li {
+  list-style: none;
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  color: white;
+}
+
+.dropdown-menu a:hover {
+  color: orange;
+}
+
+.navbar {
+  margin: 0;
+  margin-right: 10px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .toggle_btn {
+  display: block;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: block;
+  position: absolute;
+  right: 2rem;
+  top: 110px;
+  width: 280px;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 1000;
+}
+
+.dropdown-menu.open {
+  height: 140px;
+}
+
+.dropdown-menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle_btn i {
+  transition: transform 0.5s ease;
+}
+
+.toggle_btn.rotate i {
+  transform: rotate(180deg);
+}
+
+.detail_produk {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1000px;
+    margin: 0 auto;
+    height: auto;
+    background-color: white;
+    border-radius: 20px;
+  }
+
+.product, .informasi{
+    width: 50%;
+    text-align: center;
+    padding: 20px;
+}
+
+.informasi {
+    margin-right: 50px;
+    text-align: left;
+}
+
+.product {
+    overflow: hidden;
+    /* background: #ffffff; */
+    color: #21201e;
+    text-align: center;
+    width: 240px;
+    height: 400px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.2rem;
+    margin: 1.5rem;
+    transition: 0.8s;
+  }
+  
+  .product .product-title,
+  .product .product-price {
+    font-size: 18px;
+  }
+  
+  .product:hover img {
+    scale: 1.1;
+  }
+  
+  .product:hover {
+    box-shadow: 5px 15px 25px #eeeeee;
+  }
+  
+  .product img {
+    height: 200px;
+    margin: 1rem;
+    transition: all 0.3s;
+  }
+  
+  .product a:link,
+  .product a:visited {
+    color: #ececec;
+    display: inline-block;
+    text-decoration: none;
+    background-color: #2c3e50;
+    padding: 1.2rem 3rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    font-size: 14px;
+    transition: all 0.2s;
+  }
+  
+  .product a:hover {
+    transform: scale(1.1);
+  }
+
+  @media (max-width: 768px) {
+    .detail_produk {
+      flex-direction: column; /* Ubah layout menjadi kolom */
+      justify-content: center; /* Posisikan elemen di tengah */
+      height: auto; /* Sesuaikan tinggi dengan konten */
+    }
+  
+    .product, .informasi {
+      width: 100%; /* Buat elemen memenuhi lebar container */
+      margin-bottom: 20px; /* Tambahkan jarak antar elemen */
+    }
+  
+    .informasi {
+      margin-bottom: 0; /* Hilangkan margin bawah untuk elemen terakhir */
+    }
+  }
