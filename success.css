@@ -1,0 +1,45 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #1d3c34;
+  font-family: "Arial", sans-serif;
+}
+
+.success-container {
+  text-align: center;
+  background-color: #2e5d49;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.5);
+}
+
+.success-message h1 {
+  margin: 20px 0;
+  color: white;
+  font-size: 24px;
+}
+
+.checkmark-img {
+  width: 100px; /* Ukuran sesuaikan dengan kebutuhan */
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.home-button {
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.home-button:hover {
+  background-color: #b71c1c;
+}
